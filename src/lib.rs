@@ -44,6 +44,7 @@ impl Plugin for PanOrbitCameraPlugin {
         app.init_resource::<ActiveCameraData>()
             .init_resource::<MouseKeyTracker>()
             .init_resource::<TouchTracker>()
+            .register_required_components::<PanOrbitCamera, Camera3d>()
             .add_systems(
                 PostUpdate,
                 (
